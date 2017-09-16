@@ -1,0 +1,81 @@
+\section{Our Approach and Novelty}
+\subsection{Correlations Definition}
+
+We think that file A and file B are correlated if file A refers to file B or they are accessed closely. In our model, there are two types of correlations which are data correlation and access correlation respectively. If a file refers or links to another file, for example web file contains the links to scripts, images or other links, these two files are data related. And if two files often access closely, these two files are access related.
+
+Both in data correlation or access correlation, the correlations between files are different. For example, scripts and images are more related than links in web files because the links maybe not clicked by clients but the scripts and images must be loaded when the web files load. Therefore, we introduce a priority to stands for the closer correlations in file system.
+\begin{figure}[htbp]
+  \centering
+  % Requires \usepackage{graphicx}
+  %\vspace{-5pt}
+  \includegraphics[width=0.8\linewidth]{data_structure.eps}\\
+  %\vspace{-10pt}
+  \caption{Data structure of correlation.}\label{fig:data-structure}
+   %\vspace{-10pt}
+\end{figure}
+
+We propose a key-value structure for correlations as Fig.~\ref{fig:data-structure} shows. The Key is the inode number of the correlated file and occupies 8 Bytes. To keep uniqueness of key, inode number should be always increasing. The value is the score of two correlations to make a priority between correlations. The closer correlations are with higher scores.
+
+\subsection{Correlations Update}
+
+In order to give a better presentation to correlations, we propose three update methods which are online update, offline update and user interface as Fig.~\ref{fig:design} shows.
+\begin{figure}[htbp]
+  \centering
+  % Requires \usepackage{graphicx}
+  %\vspace{-5pt}
+  \includegraphics[width=1\linewidth]{design2.eps}\\
+  %\vspace{-10pt}
+  \caption{Correlations update.}\label{fig:design}
+   %\vspace{-10pt}
+\end{figure}
+
+\textbf{Online update} Semantic analysis and sliding windows procedures are responsible for updating correlations online. When clients update files data, semantic analysis procedure will be trigged to update data correlations in real time. Due to the diverse data formats with multiple types of files, the design of semantic analysis procedure becomes a challenge. For example, scripts, images or other files are linked in web file by \texttt{href} or \texttt{src}. And source code file includes head file by \texttt{include}. Based on the diverse data organization, we propose a aggravate semantic analysis proceeding to file data.
+
+We build a semantic set for different types of files. Each element is responsible for a specific type. When new data is written, the analysis process is triggered. Based on the matching patterns that we pre-defined, this process scans the data to explore the related files and records them. Each correlation is scored by files types and counted to make a difference of correlations.
+
+We create a sliding window on recently access pattern of every client to exploring online access correlations and to exclude concurrency interference simultaneously. The window is with a fixed size and slides ahead as new access sequence comes. The files in window are considered correlated and recorded as \emph{ordered pairs} to keep their access sequence. Each ordered pair has a count and alters dynamically with window slides. Meanwhile, the correlation is higher when access to two files is closer. Hence count and gap are both considered into score.
+
+\textbf{Offline update} Consider that the quality of service, online exploring must be lightweight. To give a better presentation to correlations, we propose a offline method to exploring correlations among files when the system is idle or light-loaded. System will record the access pattern for every client in past which is longer than the online windows and build a access trace to be analysed. To find the correlations among such access traces, a machine learning or deep learning will be adopted. The results are updated in files extended attributes. With offline exploring, more correlations could be found which is not only in single client, but also between clients.
+
+\textbf{User interface} Besides semantic analysis and sliding windows, we also support multiple user interfaces for clients update. All interfaces are supported POSIX interface and need not change clients applications.
+\begin{itemize}
+  \item \textbf{Set} Clients could set data and access correlations to a specific file with this interface. New score will be embedded into system.
+  \item \textbf{Remove} Remove a specific correlation item from a file.
+\end{itemize}
+
+Besides set and remove interfaces, we also support clients \textbf{get} a specific correlation from a file or \textbf{list} all correlations together.
+
+\textbf{Challenge 1} When there is overwritten to a file, as Fig.~\ref{fig:overwrite} shows, the new data is easy to make a analysis to find correlated files. But the overlayed data maybe contain links to related files, which are obsolete and should be removed simultaneously. However the covered data isn't in cache, so how to update the correlations is a challenge. We introduce a lazy update method. When a files overwrites, we make a \texttt{overwritten} tag on the file. Once the tagged file is accessed, system will make a semantic analysis again to rebuild correlations to keep consistency.
+\begin{figure}[htbp]
+  \centering
+  % Requires \usepackage{graphicx}
+  %\vspace{-5pt}
+  \includegraphics[width=1\linewidth]{overwrite.eps}\\
+  \vspace{-10pt}
+  \caption{Lazy update for obsolete correlations when deleting files.}\label{fig:overwrite}
+   %\vspace{-10pt}
+\end{figure}
+
+\textbf{Challenge 2} When a file is deleted, the correlations to it which contained in other files becomes obsolete and should be removed at the same time. As Fig.~\ref{fig:remove} depicts, file \texttt{a} is deleted. Other four files store a correlations to \texttt{a}. But the correlation is one-direct, system can't remove other correlations to file \texttt{a} right now. To reduce the operation's complexity and overhead, we reserve the obsolete correlations in origin inode. When the file is accessed, the obsolete correlations maybe fetched. Then at that time, these obsolete correlations are found and removed from inode.
+\begin{figure}[htbp]
+  \centering
+  % Requires \usepackage{graphicx}
+  %\vspace{-5pt}
+  \includegraphics[width=0.5\linewidth]{remove.eps}\\
+  %\vspace{-10pt}
+  \caption{Lazy update for obsolete correlations when deleting files.}\label{fig:remove}
+   %\vspace{-10pt}
+\end{figure}
+
+\subsection{Metadata Prefetching}
+
+We propose a aggressive metadata prefetching method to reduce traffic to MDS. In order to increase the hit ratio and reduce space overhead in client, we restrict the number of prefetching items by setting a threshold of correlations scores. When the score of a correlation is higher than the threshold, we think that the correlation is closer and should be fetched together.
+
+To reduce the lookup operations of directory across the network to check the permission, we also batch the ancestors information(directory and inode) with prefetching. System gives the same lease to correlated files as requested file due to the closer correlations. Once clients receive the batched metadata, they insert them into cache to service following requests.
+
+\subsection{Implementation and Evaluation}
+
+We are building a prototype system based on Ceph, which consists of 32 OSDs and one MDS cluster. We track the IO flows from client to MDS and embed online and offline exploring module into clients and MDS respectively. We are also creating a general library to support user interfaces which could be used for other file systems. We look forward to reducing IOs traffic and memory overhead to MDS and increasing client cache hit ratio via correlations-based metadata prefetching.
+
+
+

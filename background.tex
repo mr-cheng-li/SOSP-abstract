@@ -1,0 +1,7 @@
+\section{Background and Related Work}
+
+Previous works focus on mining relationships among files according to their access pattern. If two files are frequent accessed closely in the past, they will be accessed together with higher probability near the future. Based on this definition, C-Miner\cite{li2004c} adopts a frequent sequence mining method to explore block correlations. DiskSeen\cite{ding2007diskseen} exploits disk layout and based on analysis tof temporal and spatial relationships to improve the sequentiality of disk access. 
+
+To reduce the IOs to file system, Kroeger\cite{kroeger2001design} introduces a extended partitioned context modeling(EPCM) to explore correlations by building access trie according to access pattern and prefetches the files with the highest weight. Gu\cite{gu2010novel} proposes a the weighted-graph-based grouping method to predict and prefetch the following access sequence.
+
+These above two methods require extra space to store the correlations and the algorithm complexity is heavy. Meanwhile, based on the access pattern to exploring correlations is offline, but the correlations among files will evolve as time goes. And they only consider the access pattern and forget the intrinsic relations among files. 

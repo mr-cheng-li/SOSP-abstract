@@ -1,0 +1,57 @@
+\begin{thebibliography}{1}
+
+\bibitem{ding2007diskseen}
+X.~Ding, S.~Jiang, F.~Chen, K.~Davis, and X.~Zhang.
+\newblock Diskseen: Exploiting disk layout and access history to enhance i/o
+  prefetch.
+\newblock In {\em USENIX Annual Technical Conference}, volume~7, pages
+  261--274, 2007.
+
+\bibitem{ghemawat2003google}
+S.~Ghemawat, H.~Gobioff, and S.-T. Leung.
+\newblock {The Google file system}.
+\newblock In {\em ACM SIGOPS operating systems review}, volume~37, pages
+  29--43. ACM, 2003.
+
+\bibitem{gu2010novel}
+P.~Gu, J.~Wang, Y.~Zhu, H.~Jiang, and P.~Shang.
+\newblock A novel weighted-graph-based grouping algorithm for metadata
+  prefetching.
+\newblock {\em IEEE Transactions on Computers}, 59(1):1--15, 2010.
+
+\bibitem{kroeger2001design}
+T.~M. Kroeger and D.~D. Long.
+\newblock Design and implementation of a predictive file prefetching algorithm.
+\newblock In {\em USENIX Annual Technical Conference, General Track}, pages
+  105--118, 2001.
+
+\bibitem{li2004c}
+Z.~Li, Z.~Chen, S.~M. Srinivasan, and Y.~Zhou.
+\newblock C-miner: Mining block correlations in storage systems.
+\newblock In {\em FAST}, volume~4, pages 173--186, 2004.
+
+\bibitem{roselli2000comparison}
+D.~S. Roselli, J.~R. Lorch, T.~E. Anderson, et~al.
+\newblock {A Comparison of File System Workloads.}
+\newblock In {\em USENIX annual technical conference, general track}, pages
+  41--54, 2000.
+
+\bibitem{shvachko2010hadoop}
+K.~Shvachko, H.~Kuang, S.~Radia, and R.~Chansler.
+\newblock {The hadoop distributed file system}.
+\newblock In {\em Mass storage systems and technologies (MSST), 2010 IEEE 26th
+  symposium on}, pages 1--10. IEEE, 2010.
+
+\bibitem{weil2006ceph}
+S.~A. Weil, S.~A. Brandt, E.~L. Miller, D.~D. Long, and C.~Maltzahn.
+\newblock {Ceph: A scalable, high-performance distributed file system}.
+\newblock In {\em Proceedings of the 7th symposium on Operating systems design
+  and implementation}, pages 307--320. USENIX Association, 2006.
+
+\bibitem{zhang2016composite}
+S.~Zhang, H.~Catanese, and A.-I.~A. Wang.
+\newblock {The Composite-file File System: Decoupling the One-to-One Mapping of
+  Files and Metadata for Better Performance.}
+\newblock In {\em FAST}, pages 15--22, 2016.
+
+\end{thebibliography}
