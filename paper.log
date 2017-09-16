@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.4.3)  16 SEP 2017 15:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.4.3)  16 SEP 2017 16:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -235,6 +235,25 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
  (./problem.tex
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+
+
+LaTeX Warning: Citation `ghemawat2003google' on page 1 undefined on input line 
+3.
+
+
+LaTeX Warning: Citation `shvachko2010hadoop' on page 1 undefined on input line 
+3.
+
+
+LaTeX Warning: Citation `weil2006ceph' on page 1 undefined on input line 3.
+
+
+LaTeX Warning: Citation `roselli2000comparison' on page 1 undefined on input li
+ne 3.
+
+
 Underfull \hbox (badness 3439) in paragraph at lines 3--4
 \OT1/ptm/m/n/10 Modern dis-tributed file sys-tems, such as GFS[[]],
  []
@@ -243,6 +262,10 @@ Underfull \hbox (badness 3439) in paragraph at lines 3--4
 Underfull \hbox (badness 1635) in paragraph at lines 3--4
 \OT1/ptm/m/n/10 HDFS[[]], Ceph[[]], which con-sist of three com-po-
  []
+
+
+LaTeX Warning: Citation `zhang2016composite' on page 1 undefined on input line 
+5.
 
 Package epstopdf Info: Source file: <figs/architecture.eps>
 (epstopdf)                    date: 2017-09-16 15:29:58
@@ -261,119 +284,47 @@ File: figs/architecture-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: figs/architecture-eps-converted-to.pdf used on input l
 ine 11.
 (pdftex.def)             Requested size: 225.84375pt x 107.01012pt.
-) (./background.tex)
-(./approach.tex [1{c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-}
+) (./background.tex
+
+LaTeX Warning: Citation `li2004c' on page 1 undefined on input line 3.
 
 
- <./figs/architecture-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <figs/data_structure.eps>
-(epstopdf)                    date: 2017-09-16 15:29:58
-(epstopdf)                    size: 445722 bytes
-(epstopdf)             Output file: <figs/data_structure-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-09-16 15:29:58
-(epstopdf)                    size: 30763 bytes
-(epstopdf)             Command: <repstopdf --outfile=figs/data_structure-eps-co
-nverted-to.pdf figs/data_structure.eps>
-(epstopdf)             \includegraphics on input line 11.
-Package epstopdf Info: Output file is already uptodate.
+LaTeX Warning: Citation `ding2007diskseen' on page 1 undefined on input line 3.
 
-<figs/data_structure-eps-converted-to.pdf, id=20, 390.45876pt x 115.43124pt>
-File: figs/data_structure-eps-converted-to.pdf Graphic file (type pdf)
 
-<use figs/data_structure-eps-converted-to.pdf>
-Package pdftex.def Info: figs/data_structure-eps-converted-to.pdf used on input
- line 11.
-(pdftex.def)             Requested size: 180.67567pt x 53.41252pt.
-Package epstopdf Info: Source file: <figs/design2.eps>
-(epstopdf)                    date: 2017-09-16 15:29:59
-(epstopdf)                    size: 3455632 bytes
-(epstopdf)             Output file: <figs/design2-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-09-16 15:30:39
-(epstopdf)                    size: 54067 bytes
-(epstopdf)             Command: <repstopdf --outfile=figs/design2-eps-converted
--to.pdf figs/design2.eps>
-(epstopdf)             \includegraphics on input line 26.
-Package epstopdf Info: Output file is already uptodate.
 
-<figs/design2-eps-converted-to.pdf, id=21, 563.10374pt x 253.94875pt>
-File: figs/design2-eps-converted-to.pdf Graphic file (type pdf)
-
-<use figs/design2-eps-converted-to.pdf>
-Package pdftex.def Info: figs/design2-eps-converted-to.pdf used on input line 2
-6.
-(pdftex.def)             Requested size: 225.84375pt x 101.84894pt.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 42.
-
-(c:/texlive/2016/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 42.
-Package epstopdf Info: Source file: <figs/overwrite.eps>
-(epstopdf)                    date: 2017-09-16 15:29:59
-(epstopdf)                    size: 710712 bytes
-(epstopdf)             Output file: <figs/overwrite-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-09-16 15:29:59
-(epstopdf)                    size: 56834 bytes
-(epstopdf)             Command: <repstopdf --outfile=figs/overwrite-eps-convert
-ed-to.pdf figs/overwrite.eps>
-(epstopdf)             \includegraphics on input line 53.
-Package epstopdf Info: Output file is already uptodate.
-
-<figs/overwrite-eps-converted-to.pdf, id=22, 580.1675pt x 158.5925pt>
-File: figs/overwrite-eps-converted-to.pdf Graphic file (type pdf)
-
-<use figs/overwrite-eps-converted-to.pdf>
-Package pdftex.def Info: figs/overwrite-eps-converted-to.pdf used on input line
- 53.
-(pdftex.def)             Requested size: 225.84375pt x 61.73465pt.
-Package epstopdf Info: Source file: <figs/remove.eps>
-(epstopdf)                    date: 2017-09-16 15:29:59
-(epstopdf)                    size: 323182 bytes
-(epstopdf)             Output file: <figs/remove-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-09-16 15:29:59
-(epstopdf)                    size: 18785 bytes
-(epstopdf)             Command: <repstopdf --outfile=figs/remove-eps-converted-
-to.pdf figs/remove.eps>
-(epstopdf)             \includegraphics on input line 64.
-Package epstopdf Info: Output file is already uptodate.
-
-<figs/remove-eps-converted-to.pdf, id=23, 195.73125pt x 172.645pt>
-File: figs/remove-eps-converted-to.pdf Graphic file (type pdf)
-
-<use figs/remove-eps-converted-to.pdf>
-Package pdftex.def Info: figs/remove-eps-converted-to.pdf used on input line 64
+LaTeX Warning: Citation `kroeger2001design' on page 1 undefined on input line 5
 .
-(pdftex.def)             Requested size: 112.92188pt x 99.60464pt.
- [2 <./figs/data_structure-eps-converted-to.pdf> <./figs/design2-eps-converted-
-to.pdf>]) (./conclusion.tex) (./paper.bbl
-Underfull \hbox (badness 1325) in paragraph at lines 46--50
-[]\OT1/ptm/m/n/8 S. A. Weil, S. A. Brandt, E. L. Miller, D. D. Long, and
- []
 
-) [3 <./figs/overwrite-eps-converted-to.pdf> <./figs/remove-eps-converted-to.pd
-f>] (./paper.aux) ) 
+
+LaTeX Warning: Citation `gu2010novel' on page 1 undefined on input line 5.
+
+) (./approach.tex) (./conclusion.tex)
+No file paper.bbl.
+[1{c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+ <./figs/architecture-eps-converted-to.pdf>] (./paper.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 1916 strings out of 493014
- 27691 string characters out of 6137002
- 91000 words of memory out of 5000000
- 5404 multiletter control sequences out of 15000+600000
- 26063 words of font info for 50 fonts, out of 8000000 for 9000
+ 1869 strings out of 493014
+ 26605 string characters out of 6137002
+ 86941 words of memory out of 5000000
+ 5369 multiletter control sequences out of 15000+600000
+ 22194 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,8n,24p,1181b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/
-texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2
-016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2016/texmf
--dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/
-urw/times/utmr8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.
-pfb>
-Output written on paper.pdf (3 pages, 262959 bytes).
+{c:/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2016/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2016/texmf-dist/fo
+nts/type1/urw/times/utmb8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/time
+s/utmr8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (1 page, 93676 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
+ 35 PDF objects out of 1000 (max. 8388607)
+ 23 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
