@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.4.3)  16 SEP 2017 16:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.4.3)  20 SEP 2017 10:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -203,128 +203,83 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 45
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 48
 .
 
 (c:/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 45
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 48
 .
 
 (c:/texlive/2016/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 45
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 48
 .
 
 (c:/texlive/2016/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 45
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 48
 .
 
 (c:/texlive/2016/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
- (./problem.tex
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
+ (./motivation.tex
+<figs/architecture.jpg, id=1, 616.2222pt x 444.7014pt>
+File: figs/architecture.jpg Graphic file (type jpg)
+
+<use figs/architecture.jpg>
+Package pdftex.def Info: figs/architecture.jpg used on input line 26.
+(pdftex.def)             Requested size: 225.84375pt x 162.97626pt.
+) (./approach.tex
+<figs/vectorclock.jpg, id=2, 653.3208pt x 350.2686pt>
+File: figs/vectorclock.jpg Graphic file (type jpg)
+
+<use figs/vectorclock.jpg>
+Package pdftex.def Info: figs/vectorclock.jpg used on input line 11.
+(pdftex.def)             Requested size: 225.84375pt x 121.0833pt.
+ [1{c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-LaTeX Warning: Citation `ghemawat2003google' on page 1 undefined on input line 
-3.
+ <./figs/architecture.jpg>]
+<figs/CRDT.jpg, id=12, 479.391pt x 332.442pt>
+File: figs/CRDT.jpg Graphic file (type jpg)
+ <use figs/CRDT.jpg>
+Package pdftex.def Info: figs/CRDT.jpg used on input line 25.
+(pdftex.def)             Requested size: 225.84375pt x 156.61806pt.
+)
+(./conclusion.tex) (./paper.bbl
 
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-LaTeX Warning: Citation `shvachko2010hadoop' on page 1 undefined on input line 
-3.
-
-
-LaTeX Warning: Citation `weil2006ceph' on page 1 undefined on input line 3.
-
-
-LaTeX Warning: Citation `roselli2000comparison' on page 1 undefined on input li
-ne 3.
-
-
-Underfull \hbox (badness 3439) in paragraph at lines 3--4
-\OT1/ptm/m/n/10 Modern dis-tributed file sys-tems, such as GFS[[]],
- []
-
-
-Underfull \hbox (badness 1635) in paragraph at lines 3--4
-\OT1/ptm/m/n/10 HDFS[[]], Ceph[[]], which con-sist of three com-po-
- []
-
-
-LaTeX Warning: Citation `zhang2016composite' on page 1 undefined on input line 
-5.
-
-Package epstopdf Info: Source file: <figs/architecture.eps>
-(epstopdf)                    date: 2017-09-16 15:29:58
-(epstopdf)                    size: 1186044 bytes
-(epstopdf)             Output file: <figs/architecture-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-09-16 15:29:58
-(epstopdf)                    size: 45029 bytes
-(epstopdf)             Command: <repstopdf --outfile=figs/architecture-eps-conv
-erted-to.pdf figs/architecture.eps>
-(epstopdf)             \includegraphics on input line 11.
-Package epstopdf Info: Output file is already uptodate.
-<figs/architecture-eps-converted-to.pdf, id=1, 690.58pt x 327.2225pt>
-File: figs/architecture-eps-converted-to.pdf Graphic file (type pdf)
-
-<use figs/architecture-eps-converted-to.pdf>
-Package pdftex.def Info: figs/architecture-eps-converted-to.pdf used on input l
-ine 11.
-(pdftex.def)             Requested size: 225.84375pt x 107.01012pt.
-) (./background.tex
-
-LaTeX Warning: Citation `li2004c' on page 1 undefined on input line 3.
-
-
-LaTeX Warning: Citation `ding2007diskseen' on page 1 undefined on input line 3.
-
-
-
-LaTeX Warning: Citation `kroeger2001design' on page 1 undefined on input line 5
-.
-
-
-LaTeX Warning: Citation `gu2010novel' on page 1 undefined on input line 5.
-
-) (./approach.tex) (./conclusion.tex)
-No file paper.bbl.
-[1{c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-
- <./figs/architecture-eps-converted-to.pdf>] (./paper.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+) [2 <./figs/vectorclock.jpg> <./figs/CRDT.jpg>] (./paper.aux) ) 
 Here is how much of TeX's memory you used:
- 1869 strings out of 493014
- 26605 string characters out of 6137002
- 86941 words of memory out of 5000000
- 5369 multiletter control sequences out of 15000+600000
- 22194 words of font info for 46 fonts, out of 8000000 for 9000
+ 1867 strings out of 493014
+ 26539 string characters out of 6137002
+ 87957 words of memory out of 5000000
+ 5367 multiletter control sequences out of 15000+600000
+ 19991 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,24p,1181b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2016/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2016/texmf-dist/fo
-nts/type1/urw/times/utmb8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/time
-s/utmr8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (1 page, 93676 bytes).
+ 38i,8n,24p,1162b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/201
+6/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2016/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/tim
+es/utmb8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/
+texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (2 pages, 462459 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
- 23 compressed objects within 1 object stream
+ 31 PDF objects out of 1000 (max. 8388607)
+ 19 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

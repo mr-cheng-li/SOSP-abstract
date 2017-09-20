@@ -1,15 +1,14 @@
 # Fdb version 3
-["bibtex paper"] 1505548958 "paper.aux" "paper.bbl" "paper" 1505548960
+["bibtex paper"] 1505871356 "paper.aux" "paper.bbl" "paper" 1505872913
   "c:/texlive/2016/texmf-dist/bibtex/bst/base/abbrv.bst" 1491187357 20329 b5fed53e10044d0f8112183785c759b1 ""
-  "paper.aux" 1505548959 789 6a0c884f8a039895f82b401c6f470cf7 ""
+  "paper.aux" 1505872912 926 c4621b3658b3f29a6ebbb6b86532b272 ""
   "paper.bcf" 0 -1 0 ""
-  "paper.bib" 0 -1 0 ""
+  "paper.bib" 1502426846 2758 e1910aa2b1edccadf229ba1a35cfaa32 ""
   (generated)
-  "paper.bbl"
   "paper.blg"
-["pdflatex"] 1505548958 "paper.tex" "paper.pdf" "paper" 1505548960
-  "approach.tex" 1505548953 46 de135df4aab87c8177ac7d338755c53e ""
-  "background.tex" 1505546998 1259 73fb26af11548fc37b672c6208c683fc ""
+  "paper.bbl"
+["pdflatex"] 1505872912 "paper.tex" "paper.pdf" "paper" 1505872913
+  "approach.tex" 1505872247 3327 d21fc6d1117d867850cc3661dff1e614 ""
   "c:/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc" 1491188136 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1491188476 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "c:/texlive/2016/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1491190641 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -64,15 +63,17 @@
   "c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1491190950 1908524 9994669902f5159941d747b8a9490348 ""
   "c:/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt" 1491191021 3869746 16c056e36ef0adbb656222c4c15febf5 ""
   "c:/texlive/2016/texmf.cnf" 1491190919 673 4ae7b2f49cee444c5343a45b5d0f169c ""
-  "conclusion.tex" 1505548669 38 e16b0a08482eb6b3c29474618d4e5e01 ""
-  "endnotes.sty" 1505546998 14890 997ac05a8341a5a211fef7e19b09a4e8 ""
-  "figs/architecture.eps" 1505546998 1186044 1e8456808b0c51f2d16464e913e2dd92 ""
-  "paper.aux" 1505548959 789 6a0c884f8a039895f82b401c6f470cf7 ""
-  "paper.bbl" 0 -1 0 "bibtex paper"
-  "paper.tex" 1505548882 1671 8dc3ab033bb22fbf2b691083a5bd8110 ""
-  "problem.tex" 1505548814 1898 a647eec9a7e0ef939ad6f8ca1466df03 ""
-  "usenix.sty" 1505546999 2675 875a7612d2262df1fc6f8e5605a78865 ""
+  "conclusion.tex" 1505872907 544 8a10f5969c86d0e916f1d7295bf3552d ""
+  "endnotes.sty" 1502175100 14473 997ac05a8341a5a211fef7e19b09a4e8 ""
+  "figs/CRDT.jpg" 1505870955 92057 a2bb755f4af2685df17839efa3d40de9 ""
+  "figs/architecture.jpg" 1505865484 159910 a19cdd58671baf86b95a1ef8814622f9 ""
+  "figs/vectorclock.jpg" 1505869139 152429 90d29a944f67c33a1326acaa365ce000 ""
+  "motivation.tex" 1505868537 4225 1de7fcf19cf3a1dce0b3becd7b559c38 ""
+  "paper.aux" 1505872912 926 c4621b3658b3f29a6ebbb6b86532b272 ""
+  "paper.bbl" 1505871356 49 0eba253fc001332e731e8aba3f23127b "bibtex paper"
+  "paper.tex" 1505865770 1673 968bf3b1e355d955c08f035a037960d9 ""
+  "usenix.sty" 1490146026 2675 875a7612d2262df1fc6f8e5605a78865 ""
   (generated)
   "paper.aux"
-  "paper.pdf"
   "paper.log"
+  "paper.pdf"
