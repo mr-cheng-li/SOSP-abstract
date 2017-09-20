@@ -1,4 +1,17 @@
+\vspace{-.5em}
 \section{Our Proposal}
+\vspace{-.5em}
+In this paper, we aim at scaling logging and recovery process on multi-core machines, diluting the negative impact introduced by logging to transaction processing, and reducing fail-over time in presence of failures. To fulfill this goal, we propose a holistic approach to address the problems identified in the previous section, which consists of the following three techniques:
+
+\noindent{\bf 1. Relaxing ordering constraints between log entries.} To avoid imposing unnecessary ordering, we maintain a partial order among entries, where the dependency between two entries implies that reordering them will violate application specific invariants. 
+
+\noindent{\bf 2. Changing the logging granularity from page level to command level.} The benefit of logging commands is two-fold: (a) it significantly reduces the amount of data that needs to be flushed and consequently mitigates the overall I/O impacts; (b) commands contain rich application semantics, based on which we can explore operation commutativity to reduce false dependencies.
+
+\noindent{\bf 3. Optimizing the log entry placement.} When distributing entries to a set of logs, we have to reduce cross-log dependencies and balance the log load as possible. 
+
+We translate the above design rationale into the following {\bf System design.} First, we maintain a set of $N$ logs, where $N$ is equal to the total number of cores on a machine and each core is responsible for a dedicated log. We decouple the transaction processing and logging phases by maintaining two thread pools, namely an executor and flusher pool, whose size is also $N$. Our design has a log dispatcher that efficiently manages interactions between executors and flushers. Each executor processes database queries comprising a transaction, keeps log entries in its private buffer, and delivers content in its buffer to the log dispatcher upon commit. The log dispatcher collects log entries from different executors, performs a quick analysis to determine their dependencies and the best placement strategies, and distributes log entries to flushers. Finally, each flusher persists log entries to non-volatile storage and sends back an ``ACK'' to the corresponding executor to successfully complete a transaction.
+When recovering, we launch $N$ workers and a coordinator, where each worker processes a log file to apply changes to database as independently as possible while communicating with coordinator to proceed when cross-log synchronization is needed.
+\if 0
 In this section, we will propose two new techniques to eliminate the cross-log dependencies, which will accelerate the logging and recovery.
 \subsection{Vector Clock vs Lamport's Clock}
 The order is defined in [] by Lamport's clock, which is a global total order and will incur unnecessary false dependeicies. For example, the right side of Fig.~\ref{fig:vectorclock} shows the Lamport's Clock in distributed Log, each block indicates one log entry. When H wants to commit, all of the changes before it must be flushed to disk even though some of them are indenpendent with each other, this kind of dependency is called false dependency and will incur performance slow down.
@@ -27,7 +40,7 @@ If we transfer the multiplication into addition such as the example in Fig.~\ref
   \caption{Correlations update.}\label{fig:crdt}
    %\vspace{-10pt}
 \end{figure}
-
+\fi
 % \begin{itemize} 圆点
 %   \item \textbf{Set} 粗体 Clients could set data and access correlations to a specific file with this interface. New score will be embedded into system.
 %   \item \textbf{Remove} Remove a specific correlation item from a file.

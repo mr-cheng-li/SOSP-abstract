@@ -12,10 +12,10 @@
 
 %%%reduce the margin places between floats including pictures and tables and text
 \setlength{\floatsep}{0in}
-\setlength{\textfloatsep}{3pt plus 1.0pt minus 2.0pt}
-\setlength{\intextsep}{3pt plus 1.0pt minus 2.0pt}
-\setlength{\dbltextfloatsep}{3pt plus 1.0pt minus 2.0pt}
-\setlength{\dblfloatsep}{3pt plus 1.0pt minus 2.0pt}
+\setlength{\textfloatsep}{3pt plus 1.0pt minus 1.0pt}
+\setlength{\intextsep}{3pt plus 1.0pt minus 1.0pt}
+\setlength{\dbltextfloatsep}{3pt plus 1.0pt minus 1.0pt}
+\setlength{\dblfloatsep}{3pt plus 1.0pt minus 1.0pt}
 \setlength{\abovecaptionskip}{1pt plus 1.0pt minus 1.0pt}
 \setlength{\belowcaptionskip}{2pt plus 1.0pt minus 1.0pt}
 
@@ -26,40 +26,38 @@
 \date{}
 
 %make title bold and 14 pt font (Latex default is non-bold, 16 pt)
-\title{\Large \bf Fast Logging and Recovery on Single Node with Multi-core}
+\title{Fast Logging and Recovery Support for Transactional Databases}
 
 %for single author (just remove % characters)
 \author{
-{\rm Youhui Bai}\\
-USTC\\
-youhuibai0108@gmail.com
+{\rm Youhui Bai\thanks{Youhui Bai is the student who will present this poster.}\ \ \ \ \ \ Cheng Li\ \ \ \ \ \ Yinlong Xu}\\
+University of Science and Technology of China (USTC)
+\if 0
 \and
 {\rm Cheng Li}\\
-USTC\\
-chenglinkcs@gmail.com
+USTC
 % copy the following lines to add more authors
 \and
 {\rm Yinlong Xu}\\
-USTC\\
-ylxu@ustc.edu.cn
+USTC
+\fi
 }
  % end author
-
 \maketitle
 
 % Use the following at camera-ready time to suppress page numbers.
 % Comment it out when you first submit the paper for review.
 \thispagestyle{empty}
 % \input{background}
-
 \input{motivation}
 
 \input{approach}
 
-\input{conclusion}
+%\input{conclusion}
 
 \begin{footnotesize}
 %\bibliographystyle{plain}
+\vspace{-.5em}
 \bibliographystyle{abbrv}
 \bibliography{paper}
 \end{footnotesize}
