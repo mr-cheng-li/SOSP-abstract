@@ -1,8 +1,17 @@
-\section{Background and Motivations}
-Failures(e.g., process crash, kernel panics, power outages) are common in systems like Database systems and File systems, even in robust enough Distributed systems, which will incur fatal problems such as inconsistency and data loss. Techniques have been proposed to address these issues, for example, systems offten leverage Log and Replication to handle failures. In this paper, we focus on Log especially write-ahead log, systems will log changes into Log for persistency, then to the real place,  When restarting, systems recovery from Log take advantage of full operation informations in Log.
+\section{Background and Motivation}
+\vspace{-.5em}
+Failures such as process crash, kernel panics, power outages are commonplace in today's systems, and
+very likely introduce fatal effects to applications such as data inconsistency or loss. 
+To be resilient to failures, mission-critical applications often store their data in transactional databases, which rely on write-ahead logging to make updates persistent to non-volatile storage upon transaction commits and recover system state from failures when failures reboot. As users favor real-time responses and highly available services, the performance of runtime logging and offline recovery is crucial. 
 
-But the logging when forward processing and recovery from Log after failures are both too slow to support high-level application well, which is intolerable even for a single node. the architeture and process flow of a single node is illustrated as Fig.~\ref{fig:architecture}. The \texttt{Disk} and \texttt{Dram} are managed by page. When transactions want to operate, they map the operations into Data buffer in step 1, then log the operations in Log buffer in step 2, the log entries in Log buffer will be flushed to durable storage for persistency in step 3, then, if the flush returns successfully in step 4, the system will inform user that the operations are completed, and the system will flush the dirty page in Data buffer into durable storage later in step 5.
+However, a recent study concluded that logging is one of the bottlenecks in databases 
+running on multi-core machines by showing that a significant amount of CPU cycles corresponds 
+to log contentions~\cite{Wang2014DistLog}. The root cause of the slowdown is that the widely used logging and 
+recovery algorithms such as ARIES~\cite{Mohan1992ARIES} maintain a single log and many concurrent threads contend for the log head. Similarly, recovering performs poorly as it needs to sequentially scan the whole log and does not explore massive parallelism enabled by current hardware. This result points out there exists a gap between the original design principles of database logging and the ever increasing CPU density and capacity. 
 
+To close the gap, some researchers proposed to keep a set of distributed logs rather than a centralized log so that the log contentions will be reduced~\cite{Wang2014DistLog}. However, the major challenge of doing so is to maintain consistency between log entries across multiple log files, which hinders the recovery performance due to the following reasons. First, dependencies between log entries belonging to different transactions lead to cross-log synchronizations when recovering state from failures, as their relative orders matter~\cite{Johnson2012Scale}. Second, the ordering constraints between entries imposed at the logging time is stronger than those established when their corresponding transactions were executing. Third, there exist many false dependencies introduced by logging changes to pages, as two transactions modifying different parts of a shared page will be still flagged as conflicting. 
+
+\if 0
 Generally, systems leverage single Log to log and recover for simple, this is why the logging and revovery are so slow. First, the multiple threads will contend to write to a single Log, second, a sequential scan will be performed over the corresponding log by only one thread. Both of them will cause worse scalability as the number of threads grows in a single node with multi-core.
 
 A straightforward approach to speed up the logging and recovery is distributing the Log, for example, one Log file per processor. But the distributed Log is still tardy because of too many cross-log dependencies.
@@ -29,5 +38,5 @@ In this paper, we propose a new version of distributed Log by leveraging a few t
    %\vspace{-10pt}
 \end{figure}
 
-
+\fi
 % In this paper, we propose a correlations-based metadata prefetching to reduce IO traffic to MDS, to scale distributed file systems, to increase client cache hit ratio with high accuracy and low false positive. How to define the correlations among files and how to update correlations in real time become a challenge.
